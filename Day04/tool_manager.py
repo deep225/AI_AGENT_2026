@@ -9,4 +9,4 @@ def execute_tool(user_input):
         return f"Rolling dice: {roll_dice()}"
     if "password" in text:
         return f"Generated password: {generate_password(12)}"
-    return "Tool not found."
+    return None  # Return None if no tool matches the input

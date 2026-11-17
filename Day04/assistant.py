@@ -33,7 +33,8 @@ while True:
     user_input = input("\nYou: ")
     tool_result = execute_tool(user_input)
     if tool_result:
-        print(f"\nAI: {tool_result}")        
+        print(f"\nAI: {tool_result}")       
+        continue  # Skip sending the question to the AI model if a tool was executed     
     messages.append({"role": "user", "content": user_input})
     if user_input.lower() in ["exit", "quit"]:
         print("Exiting the chat. Goodbye!")        
